@@ -148,9 +148,55 @@ body {
 }
 
 .banner {
-    border: 1px solid black;
     padding: 30px;
+    margin: 140px 0px 80px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.banner__title {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.banner__title span {
+  color: var(--color-dark-green);
+  font-family: "exoBold";
+  font-size: 46px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 55px;
+}
+
+.banner__description {
+  color: var(--color-light-blue-gray);
+  font-family: "exoBold";
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-top: 45px;
+  position: relative;
+}
+
+.banner__description span {
+  opacity: 0.3;
+  color: var(--color-light-green);
+  font-family: "exoBold";
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 84px;
+  position: absolute;
+}
+
+.banner__description-first-quotation-mark {
+    transform: scale(-1);
+    top: -55px;
+    left: -12px;
+}
+
+.banner__description-second-quotation-mark {
+    bottom: -50px;
 }
