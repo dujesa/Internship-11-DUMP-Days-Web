@@ -279,12 +279,31 @@ body {
 }
 
 .type-captions__caption {
+  position: relative;
   color: var(--color-light-blue-gray);
   font-family: "fuseRegular";
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 0;
   line-height: 26px;
+  cursor: pointer;
+}
+
+.type-captions__caption::after {
+  position: absolute;
+  content: "";
+  border-bottom: 0.2em solid var(--color-light-green);
+  bottom: 3px;
+  right: 0;
+  z-index: -1;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.type-captions__caption:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
 }
 
 .highlighted__caption {
@@ -354,6 +373,11 @@ body {
   font-size: 12px;
   letter-spacing: 0;
   line-height: 18px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.type__event:hover {
+  transform: scale(1.025);
 }
 
 .event__domain {
@@ -363,22 +387,43 @@ body {
   margin: 0 auto 4px 0;
 }
 
-.event__domain--active {
-  grid-area: domain;
-  font-size: 14px;
-  line-height: 17px;
-  margin-bottom: 4px;
-  width: 100%;
-}
-
-.event__domain--active::after {
-  content: url("/assets/svgs/Oval-1.svg") " U TIJEKU";
-  margin: auto 0 auto 6.5px;
+.domain__active {
+  text-transform: uppercase;
   color: var(--color-pink);
   font-family: "fuseBold";
   font-size: 12px;
   letter-spacing: 0;
   line-height: 15px;
+}
+
+.domain__active::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  margin: 0 4px 1px 6.5px;
+	box-shadow: 0 0 0 0 var(--color-pink);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(215, 50, 70, 0.7);
+  }
+  75% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(215, 50, 70, 0);
+    
+  }
+  to {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(215, 50, 70, 0);
+  }
 }
 
 .domain__name {
@@ -435,9 +480,15 @@ body {
 
 .event__link {
   grid-area: link;
+  width: fit-content;
   text-decoration: none;
   display: flex;
   align-items: flex-end;
+  transition: transform 0.3s ease-in-out;
+}
+
+.event__link:hover {
+  transform: scale(1.05);
 }
 
 .link__content {
