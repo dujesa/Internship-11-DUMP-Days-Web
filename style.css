@@ -692,15 +692,15 @@ body {
     transform: translateX(-288%);
   }
   85% {
-    transform: translateX(-306%);
+    transform: translateX(-307%);
   }
   90% {
-    transform: translateX(-324%);
+    transform: translateX(-326%);
   }
   95% {
-    transform: translateX(-342%);
+    transform: translateX(-345%);
   }
   to {
-    transform: translateX(-360%);
+    transform: translateX(-364%);
   }
 }
