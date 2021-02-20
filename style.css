@@ -177,7 +177,7 @@ body {
 
 .banner__description {
   color: var(--color-light-blue-gray);
-  font-family: "fuseBold";
+  font-family: "fuseRegular";
   font-size: 14px;
   letter-spacing: 0;
   line-height: 22px;
@@ -197,13 +197,13 @@ body {
 }
 
 .banner__description-first-quotation-mark {
-  transform: scale(-1);
-  top: -55px;
+  top: -30%;
   left: -12px;
 }
 
 .banner__description-second-quotation-mark {
-  bottom: -50px;
+  bottom: -60%;
+  right: 7.5%;
 }
 
 .main__schedule {
