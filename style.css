@@ -498,3 +498,92 @@ body {
 .link__arrow {
   margin-left: 4.5px;
 }
+
+.aplication__section {
+    padding: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.aplication__section:after {
+    content: ' ';
+    display: block;
+    background: transparent;
+    height: 300px;
+}
+
+.aplication__section-title {
+  color: var(--color-dark-green);
+  font-family: "fuseRegular";
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 38px;
+  margin: 0;
+}
+
+.aplication__section-description {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aplication__section-description-text {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.aplication__section-description-text img {
+  height: 21.5px;
+  width: 14.5px;
+  transform: rotate(-90deg);
+  margin-right: 14.25px;
+}
+
+.aplication__section-description-text p {
+  color: var(--color-light-blue-gray);
+  font-family: "fuseRegular";
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.aplication__section-buttons {
+  margin-top: 50px;
+}
+
+.aplication__section-buttons button {
+  margin: 0;
+  font-family: "fuseRegular";
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19px;
+  text-align: center;
+  outline: none;
+  height: 39px;
+  width: 124.11px;
+  border: none;
+}
+
+.aplication__section-registration-button {
+  border-radius: 10px;
+  background-color: var(--color-light-green);
+  color: var(--color-white);
+  box-shadow: 0 5px 10px 0 rgba(39,199,189,0.35);
+}
+
+.aplication__section-sign-in-button {
+  background-color: transparent;
+  color: var(--color-light-green);
+}
+
+.aplication__section-mockup {
+  height: 400px;
+  width: auto;
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+}
+
+
