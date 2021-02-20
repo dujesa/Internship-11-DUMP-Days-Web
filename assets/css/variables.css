@@ -10,11 +10,12 @@
     --color-blue: #2450C9;
     --color-dark-blue: #1C2E5E;
     --color-light-green: #5EC4BC;
+    --color-olive-green: #1A3C44;
     --color-dark: #000000;
     --color-dark-green: #1A3C44;
     --color-white-coffee: #F1F3F6;
     --color-light-blue-gray:#7A8E94;
 
-    --mobile-resolution: 985px;
+    --mobile-resolution: 476px;
     --web-max-width: 1680px;
 }
