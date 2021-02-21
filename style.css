@@ -251,6 +251,7 @@ body {
   margin: 140px 0px 80px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -304,7 +305,8 @@ body {
 }
 
 .main__schedule {
-  max-width: 475px;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 .schedule__title {
@@ -703,7 +705,7 @@ body {
 }
 
 .previous-years__gallery {
-  animation: slider 20s linear infinite alternate;
+  animation: mobile-slider 20s linear infinite alternate;
 }
 
 .gallery__slider {
@@ -825,70 +827,22 @@ body {
   width: 80%;
 }
 
-@keyframes slider {
+@keyframes mobile-slider {
   from {
     transform: translateX(0);
   }
-  5% {
-    transform: translateX(-18%);
-  }
-  10% {
-    transform: translateX(-36%);
-  }
-  15% {
-    transform: translateX(-54%);
-  }
-  20% {
-    transform: translateX(-72%);
-  }
-  25% {
-    transform: translateX(-90%);
-  }
-  30% {
-    transform: translateX(-108%);
-  }
-  35% {
-    transform: translateX(-126%);
-  }
-  40% {
-    transform: translateX(-144%);
-  }
-  45% {
-    transform: translateX(-162%);
-  }
-  50% {
-    transform: translateX(-180%);
-  }
-  55% {
-    transform: translateX(-198%);
-  }
-  60% {
-    transform: translateX(-216%);
-  }
-  65% {
-    transform: translateX(-234%);
-  }
-  70% {
-    transform: translateX(-252%);
-  }
-  75% {
-    transform: translateX(-270%);
-  }
-  80% {
-    transform: translateX(-288%);
-  }
-  85% {
-    transform: translateX(-307%);
-  }
-  90% {
-    transform: translateX(-326%);
-  }
-  95% {
-    transform: translateX(-345%);
-  }
   to {
-    transform: translateX(-364%);
+    transform: translateX(-600%);
   }
+}
+
+@keyframes responsive-slider {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-200%);
+    }
 }
 
 .question__section {
@@ -1006,12 +960,27 @@ footer {
   margin-top: 11px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .aplication__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .aplication__section-mockup {
+    opacity: 0;
+  }
+
+  .aplication__section-title {
+    text-align: center;
+  }
+}
+
+
 
 @media screen and (min-width: 768px) {
-  .aplication__section-mockup {
-    height: 800px;
-    width: auto;
-    left: calc(100vw - 750px);
+  .previous-years__gallery {
+    animation: responsive-slider 20s linear infinite alternate;
   }
 
   .aplication__section:after {
@@ -1030,7 +999,7 @@ footer {
 
   .header__navigation-bar-text {
     display: block;
-  }
+  }  
 
   .banner__title {
     display: flex;
@@ -1040,6 +1009,12 @@ footer {
 
   .banner__description {
     font-size: 20px;
+  }
+
+  .aplication__section-mockup {
+    height: 800px;
+    width: auto;
+    left: calc(100vw - 750px);
   }
   
   .footer__rights {
@@ -1062,6 +1037,13 @@ footer {
   .header__hamburger {
     display: none;
   }
+
+  .container__type-captions {
+    justify-content: center;
+  }
+
+  .type-captions__caption {
+    margin: 0px 2%;
 
   .header__navigation-bar-text {
     display: block;
