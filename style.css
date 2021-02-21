@@ -981,3 +981,28 @@ footer {
   width: 29px;
   margin-top: 11px;
 }
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+  }
+
+  .header__hamburger {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+}
