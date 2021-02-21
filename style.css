@@ -282,7 +282,8 @@ body {
 }
 
 .main__schedule {
-  max-width: 475px;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 .schedule__title {
